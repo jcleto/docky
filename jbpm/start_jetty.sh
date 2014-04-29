@@ -1,4 +1,9 @@
 #!/bin/bash
+# Create DB
+mysql -u root -proot -h $CENTOS_PORT_3306_TCP_ADDR < /opt/database/create_database_users.sql
+mysql -u root -proot -h $CENTOS_PORT_3306_TCP_ADDR < /opt/database/user_create.sql
+mysql -u root -proot -h $CENTOS_PORT_3306_TCP_ADDR < /opt/database/hts_create_schema.sql
+mysql -u root -proot -h $CENTOS_PORT_3306_TCP_ADDR < /opt/database/jbpm_create_schema.sql
 
 cd /opt/jetty
 java -jar start.jar
