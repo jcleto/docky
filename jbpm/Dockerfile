@@ -9,8 +9,8 @@ RUN rpm -Uvh --force http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
 
 RUN yum update -y
 
-RUN yum install -y java-1.7.0-openjdk-devel --enablerepo=remi
 RUN yum install -y mysql
+RUN yum install -y java-1.7.0-openjdk-devel --enablerepo=remi
 
 ADD ./jetty9.tar.gz /opt/
 RUN mv /opt/jetty-distribution-9.1.4.v20140401/ /opt/jetty
